@@ -88,7 +88,7 @@ const Header = () => {
         mainlevel.Items.map(sublevel => {
           // console.log("sublevel --- ", sublevel)
           if (sublevel.children) {
-            sublevel.children.map(sublevel1 => {
+            sublevel.children.map((sublevel1:any) => {
               // console.log("sublevel1 --- ", sublevel1)
               i.push(sublevel1)
               if (sublevel1.children) {

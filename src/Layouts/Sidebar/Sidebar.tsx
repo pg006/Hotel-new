@@ -64,10 +64,10 @@ export const Sidebar = () => {
         mainlevel.Items.map(sublevel => {
           sublevel.active = false;
           if (sublevel.children) {
-            sublevel.children.map(sublevel1 => {
+            sublevel.children.map((sublevel1:any) => {
               sublevel1.active = false;
-              if (sublevel1.children) {
-                sublevel1.children.map(sublevel2 => {
+              if (sublevel1?.children) {
+                sublevel1?.children.map(sublevel2 => {
                   sublevel2.active = false;
                   return sublevel2;
                 })
@@ -105,7 +105,7 @@ export const Sidebar = () => {
               items.selected = true;
             }
             if (items.children) {
-              items.children.map(submenu => {
+              items.children.map((submenu:any) => {
                 submenu.active = false;
                 submenu.selected = false;
                 if (location.pathname === submenu.path + '/') {
@@ -114,7 +114,7 @@ export const Sidebar = () => {
                   submenu.active = true;
                   submenu.selected = true;
                 }
-                if (submenu.children) {
+                if (submenu?.children) {
                   submenu.children.map(submenu1 => {
                     submenu1.active = false;
                     submenu1.selected = false;
@@ -154,7 +154,7 @@ export const Sidebar = () => {
                 sublevel.active = true;
               }
               if (sublevel.children) {
-                sublevel.children.map(sublevel1 => {
+                sublevel.children.map((sublevel1:any) => {
                   sublevel1.active = false;
                   if (item === sublevel1) {
                     sublevel.active = true;
@@ -212,7 +212,7 @@ export const Sidebar = () => {
             </svg></div>
             {/* first level */}
             <ul className="side-menu" style={{ marginLeft: "0px" }}>
-              {menuitems.map((Item, i) => (
+              {menuitems.map((Item:any, i) => (
                 <Fragment key={i + Math.random() * 100}>
                   <li className="sub-category"><h3>{Item.menutitle}</h3></li>
                   {Item.Items.map((menuItem, i) => (

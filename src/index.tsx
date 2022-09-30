@@ -146,6 +146,7 @@ const Landing = lazy(() => import("./components/Landing"))
 
 const AuthLogin = lazy(() => import('./components/Authentication/firebaseAuth/AuthLogin'));
 const SignUp = lazy(() => import('./components/Authentication/firebaseAuth/Signup'));
+const FrontOffice = lazy(()=> import('./components/FrontOffice/FrontOffice'));
 
 
 const container: HTMLElement | any = document.getElementById('root');
@@ -168,7 +169,8 @@ root.render(
 
                 {/* Apps */}
                 <Route>
-                <Route path={`/dashboard`} element={<Dashboard />} />
+                  <Route path={`/dashboard`} element={<Dashboard />} />
+                  <Route path={`/frontoffice`} element={<FrontOffice />} />
                   <Route path={`/apps/carddesigns`} element={<CardsDesign />} />,
                   <Route path={`/apps/chat`} element={<Chat />} />,
                   <Route path={`/apps/charts`} element={<Charts />} />,
