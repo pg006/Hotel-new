@@ -3,7 +3,7 @@ export const MENUITEMS = [
         // menutitle: "MAIN",
         Items: [
             { path: `/dashboard`, icon: 'fe fe-home', type: 'link', active: false, selected: false, title: 'Dashboard' },
-            { path: `/frontoffice`, icon: 'fe fe-home', type: 'link', active: false, selected: false, title: 'Front Office' },
+            { path: `/frontoffice`, icon: 'fe fe-user', type: 'link', active: false, selected: false, title: 'Front Office' },
             { path: `/dashboard`, icon: 'fe fe-home', type: 'link', active: false, selected: false, title: 'Accounts' },
             { path: `/dashboard`, icon: 'fe fe-home', type: 'link', active: false, selected: false, title: 'Rates' },
             { path: `/dashboard`, icon: 'fe fe-home', type: 'link', active: false, selected: false, title: 'Guest Services' },
